@@ -15,13 +15,13 @@ with open(path.join(current_dir, "README.md"), encoding="utf-8") as file:
 
 name = "openemailsequence"
 package = "email_sequences"
-description = "Email drip sequences for Django."
+description = "Email drip sequences for Django: multi-step campaigns managed from the admin."
 url = "https://github.com/eracle/OpenEmailSequence"
 author = "eracle"
 author_email = "eracle@openoutreach.app"
 license = "MIT"
 install_requires = ["Django>=5.0"]
-keywords = "django email sequence drip campaign outreach"
+keywords = "django email drip campaign sequence newsletter marketing automation lifecycle onboarding outreach"
 
 
 def get_version(package):
@@ -94,5 +94,6 @@ setup(
         "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3.13",
         "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Communications :: Email",
     ],
 )
