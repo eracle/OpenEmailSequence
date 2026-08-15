@@ -15,7 +15,6 @@ from django.db.models.query import QuerySet
 from django.template import Context, Template
 from django.utils.html import strip_tags
 from django.utils.safestring import SafeString
-from typing_extensions import TypeAlias
 
 from email_sequences.exceptions import MessageClassNotFound
 from email_sequences.models import Sequence, SentEmail, UserUnsubscribe
@@ -110,7 +109,7 @@ class SequenceMessage(object):
     # Ignoring this line because mypy says User is not a valid type
     def __init__(self, sequence_base: "SequenceBase", user: User):  # type: ignore
         self.sequence_base = sequence_base
-        self.user: TypeAlias = user
+        self.user = user
         self._context: Optional[Context] = None
         self._subject: Optional[SafeString] = None
         self._body: Optional[SafeString] = None
